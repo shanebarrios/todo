@@ -175,22 +175,22 @@ function setDefaultFormContents() {
 }
 
 
-allTasksButton.addEventListener("click", (e) => {
+allTasksButton.addEventListener("click", () => {
     currentTab.type = "all";
     displayTab();
 });
 
-todayButton.addEventListener("click", (e) => {
+todayButton.addEventListener("click", () => {
     currentTab.type = "day";
     displayTab();
 });
 
-weekButton.addEventListener("click", (e) => {
+weekButton.addEventListener("click", () => {
     currentTab.type = "week";
     displayTab();
 });
 
-addProjectButton.addEventListener("click", (e) => {
+addProjectButton.addEventListener("click", () => {
     addProjectButton.style.display = "none";
     addProjectForm.style.display = "block";
     addProjectForm.querySelector("input").focus();
@@ -213,7 +213,7 @@ addProjectCancel.addEventListener("click", (e) => {
     addProjectForm.reset();
 })
 
-addTodoButton.addEventListener("click", (e) => {
+addTodoButton.addEventListener("click", () => {
     placeForm(null);
 });
 

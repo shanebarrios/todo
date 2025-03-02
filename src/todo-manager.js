@@ -54,6 +54,7 @@ export function load() {
     }
     catch (error) {
         console.warn("Unabled to load local storage");
+        console.warn(error);
         projects = [];
         todos = [];
         projects.push(createProject("Default"));
@@ -61,7 +62,7 @@ export function load() {
 }
 
 export function getDefaultProject() {
-    return defaultProject;
+    return projects[0];
 };
 
 export function addProject(title) {
@@ -120,7 +121,7 @@ export function getProject(projectId) {
 
 export function getAllTodos() {
     // Dumb code
-    return todos.filter((todo) => true).sort(compareFunc);
+    return todos.slice().sort(compareFunc);
 }
 
 export function getAllProjects() {
